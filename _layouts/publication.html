@@ -1,0 +1,146 @@
+---
+layout: base
+---
+
+<style>
+    .publication-page {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .publication-title {
+        margin: 0 0 0.75rem 0;
+        line-height: 1.12;
+    }
+
+    .publication-last-modified-row {
+        display: flex;
+        justify-content: flex-end;
+        margin: 2rem 0 5rem 0;
+    }
+
+    .publication-last-modified {
+        font-size: 0.92rem;
+        font-weight: 600;
+        opacity: 0.9;
+        text-align: right;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .publication-cover {
+        margin-bottom: 1.5rem;
+    }
+
+    .publication-cover img {
+        width: 100%;
+        max-width: 900px;
+        border-radius: 0.5rem;
+        display: block;
+    }
+
+    .publication-description-block {
+        margin: 0 0 1.5rem 0;
+        padding-left: 1rem;
+        border-left: 3px solid rgba(255, 255, 255, 0.18);
+        font-size: 1.02rem;
+        line-height: 1.9;
+        font-weight: 600;
+        opacity: 0.92;
+    }
+
+    .publication-meta {
+        margin-bottom: 2rem;
+    }
+
+    .publication-meta p {
+        margin: 0.35rem 0;
+        line-height: 1.7;
+    }
+
+    .publication-meta strong {
+        font-weight: 700;
+    }
+
+    .publication-links a {
+        margin-right: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .publication-body section {
+        margin-bottom: 2rem;
+    }
+
+    .publication-body h2 {
+        margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 900px) {
+        .publication-cover img {
+            max-width: 100%;
+        }
+    }
+</style>
+
+<article class="publication-page">
+    <header>
+        <h1 class="publication-title">{{ page.title }}</h1>
+
+        {% if page.last_modified_at %}
+        <div class="publication-last-modified">
+            Last modified: {{ page.last_modified_at | date: "%Y-%m-%d" }}
+        </div>
+        {% endif %}
+
+        {% if page.image %}
+        <div class="publication-cover">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+        </div>
+        {% endif %}
+
+        {% if page.description %}
+        <div class="publication-description-block">
+            {{ page.description }}
+        </div>
+        {% endif %}
+
+        <div class="publication-meta">
+            {% if page.venue %}
+            <p><strong>Venue:</strong> {{ page.venue }}</p>
+            {% endif %}
+
+            {% if page.authors %}
+            <p><strong>Authors:</strong> {{ page.authors }}</p>
+            {% endif %}
+
+            <p class="publication-links">
+                <strong>Links:</strong>
+                {% if page.paper_link %}
+                <a href="{{ page.paper_link | relative_url }}" target="_blank" rel="noopener">Paper</a>
+                {% endif %}
+                {% if page.website_link %}
+                <a href="{{ page.website_link }}" target="_blank" rel="noopener">Website</a>
+                {% endif %}
+                {% if page.code_link %}
+                <a href="{{ page.code_link | relative_url }}" target="_blank" rel="noopener">Code</a>
+                {% endif %}
+            </p>
+        </div>
+    </header>
+
+    <div class="publication-body">
+        <section id="abstract">
+            <h2>Abstract</h2>
+            {% if page.abstract %}
+            <p>{{ page.abstract }}</p>
+            {% else %}
+            {{ content }}
+            {% endif %}
+        </section>
+
+        {% if page.abstract %}
+        <section id="details">
+            {{ content }}
+        </section>
+        {% endif %}
+    </div>
+</article>

@@ -136,6 +136,10 @@ collections:
     permalink: /projects/:path/
     output: true
 
+  publications:
+    output: true
+    permalink: /research/:name/
+
 exclude:
   - .jekyll-cache
   - .sass-cache

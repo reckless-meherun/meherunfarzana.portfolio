@@ -2,8 +2,260 @@
 layout: base
 ---
 
-{% assign posts = site.categories[page.slug] | default:site.tags[page.slug] | default:site.posts %}
+<style>
+  .section-title {
+    margin: 0.8rem 0 0.25rem 0;
+  }
 
-{% for post in posts %}
-  {% include_cached components/post.html post=post no_link_title=page.no_link_title no_excerpt=page.no_excerpt hide_image=page.hide_image %}
-{% endfor %}
+  .publications-page {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .publications-intro {
+    margin-bottom: 2rem;
+  }
+
+  .publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .publication-card {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 1.75rem;
+    align-items: start;
+    padding: 0.01rem 0 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .publication-card:last-child {
+    border-bottom: none;
+  }
+
+  .publication-media a {
+    display: block;
+    text-decoration: none;
+    border: 0;
+  }
+
+  .publication-media img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 0.5rem;
+    display: block;
+    object-fit: cover;
+  }
+
+  .publication-content {
+    min-width: 0;
+  }
+
+  .publication-title {
+    margin: 0 0 0.45rem 0 !important;
+    font-size: 1rem !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+  }
+
+  .publication-title a {
+    text-decoration: none;
+    border-bottom: none !important;
+    font-weight: 700 !important;
+  }
+
+  .publication-title a::after {
+    display: none !important;
+  }
+
+  .publication-description {
+    margin: 0.45rem 0 0.85rem 0;
+    opacity: 0.9;
+  }
+
+  .publication-meta {
+    margin: 0.3rem 0;
+    line-height: 1.6;
+  }
+
+  .publication-meta strong {
+    font-weight: 700;
+  }
+
+  .publication-links {
+    margin-top: 0.75rem;
+    line-height: 1.8;
+  }
+
+  .publication-links a {
+    margin-right: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .publication-continue {
+    margin-top: 0.8rem;
+    font-weight: 600;
+  }
+
+  .publication-footer {
+    margin-top: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .publication-links {
+    margin-top: 0;
+    line-height: 1.8;
+  }
+
+  .publication-links a {
+    margin-right: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .publication-continue {
+    margin-top: 0;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 700px) {
+    .publication-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .publication-card {
+      grid-template-columns: 1fr;
+    }
+
+    .publication-media img {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<div class="publications-page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+
+    {% if page.description %}
+    <div class="publications-intro">
+      {{ page.description }}
+    </div>
+    {% endif %}
+
+    {{ content }}
+  </header>
+
+  {% assign publications = site.publications | sort: "date" | reverse %}
+
+  <h2 class="section-title">Preprints</h2>
+  <div class="publication-list">
+    {% for pub in publications %}
+    {% if pub.status == "preprint" %}
+    <article class="publication-card">
+      {% if pub.image %}
+      <div class="publication-media">
+        <a href="{{ pub.url | relative_url }}">
+          <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+        </a>
+      </div>
+      {% endif %}
+
+      <div class="publication-content">
+        <p class="publication-title">
+          <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+        </p>
+
+        {% if pub.venue %}
+        <p class="publication-meta"><strong>Venue:</strong> {{ pub.venue }}</p>
+        {% endif %}
+
+        {% if pub.authors %}
+        <p class="publication-meta"><strong>Authors:</strong> {{ pub.authors }}</p>
+        {% endif %}
+
+        <div class="publication-footer">
+          <div class="publication-links">
+            {% if pub.paper_link %}
+            <a href="{{ pub.paper_link | relative_url }}" target="_blank" rel="noopener">Paper</a>
+            {% endif %}
+
+            {% if pub.website_link %}
+            <a href="{{ pub.website_link }}" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+
+            {% if pub.code_link %}
+            <a href="{{ pub.code_link }}" target="_blank" rel="noopener">Code</a>
+            {% endif %}
+          </div>
+
+          <div class="publication-continue">
+            <a href="{{ pub.url | relative_url }}#abstract">Continue to Abstract→</a>
+          </div>
+        </div>
+      </div>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <h2 class="section-title">Publications</h2>
+  <div class="publication-list">
+    {% for pub in publications %}
+    {% if pub.status == "publication" %}
+    <article class="publication-card">
+      {% if pub.image %}
+      <div class="publication-media">
+        <a href="{{ pub.url | relative_url }}">
+          <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
+        </a>
+      </div>
+      {% endif %}
+
+      <div class="publication-content">
+        <p class="publication-title">
+          <a href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+        </p>
+
+        {% if pub.venue %}
+        <p class="publication-meta"><strong>Venue:</strong> {{ pub.venue }}</p>
+        {% endif %}
+
+        {% if pub.authors %}
+        <p class="publication-meta"><strong>Authors:</strong> {{ pub.authors }}</p>
+        {% endif %}
+
+        <div class="publication-footer">
+          <div class="publication-links">
+            {% if pub.paper_link %}
+            <a href="{{ pub.paper_link | relative_url }}" target="_blank" rel="noopener">Paper</a>
+            {% endif %}
+
+            {% if pub.website_link %}
+            <a href="{{ pub.website_link }}" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+
+            {% if pub.code_link %}
+            <a href="{{ pub.code_link }}" target="_blank" rel="noopener">Code</a>
+            {% endif %}
+          </div>
+
+          <div class="publication-continue">
+            <a href="{{ pub.url | relative_url }}#abstract">Continue to Abstract→</a>
+          </div>
+        </div>
+      </div>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>

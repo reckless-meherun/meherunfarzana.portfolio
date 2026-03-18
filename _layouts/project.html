@@ -2,12 +2,83 @@
 layout: base
 ---
 
-<h1 class="projects-page-title">{{ page.title | upcase }}</h1>
+<style>
+  .projects-page {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
-<div class="projects-list">
-  {% assign projects = site.projects | sort: "date" | reverse %}
+  .projects-intro {
+    margin-bottom: 2rem;
+  }
 
-  {% for project in projects %}
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .project-entry {
+    padding: 0.01rem 0 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .project-entry:last-child {
+    border-bottom: none;
+  }
+
+  .project-header {
+    margin-bottom: 0.45rem;
+  }
+
+  .project-title {
+    margin: 0 0 0.45rem 0 !important;
+    font-size: 1.5rem !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+  }
+
+  .project-date {
+    margin: 0.3rem 0;
+    line-height: 1.6;
+  }
+
+  .project-course {
+    margin: 0.3rem 0;
+    line-height: 1.6;
+  }
+
+  .project-details {
+    margin: 0.9rem 0 0 1.25rem;
+    padding: 0;
+    line-height: 1.8;
+  }
+
+  .project-details li {
+    margin: 0.3rem 0;
+  }
+
+  .project-details a {
+    white-space: nowrap;
+  }
+</style>
+
+<div class="projects-page">
+  <header class="page-header">
+    <h1>{{ page.title | upcase }}</h1>
+
+    {% if page.description %}
+    <div class="projects-intro">
+      {{ page.description }}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="projects-list">
+    {% assign projects = site.projects | sort: "date" | reverse %}
+
+    {% for project in projects %}
     <article class="project-entry">
       <div class="project-header">
         <h2 class="project-title">{{ project.title }}</h2>
@@ -15,62 +86,63 @@ layout: base
       </div>
 
       {% if project.course %}
-        <p class="project-course">
-          Course: {{ project.course }}
-        </p>
+      <p class="project-course">
+        Course: {{ project.course }}
+      </p>
       {% endif %}
 
       <ul class="project-details">
         {% if project.highlights %}
-          {% for item in project.highlights %}
-            <li>{{ item }}</li>
-          {% endfor %}
+        {% for item in project.highlights %}
+        <li>{{ item }}</li>
+        {% endfor %}
         {% elsif project.summary %}
-          <li><strong>Summary:</strong> {{ project.summary }}</li>
+        <li><strong>Summary:</strong> {{ project.summary }}</li>
         {% endif %}
 
         {% if project.github %}
-          <li>
-            <strong>GitHub:</strong>
-            <a href="{{ project.github }}">Repository</a>
-          </li>
+        <li>
+          <strong>GitHub:</strong>
+          <a href="{{ project.github }}">Repository</a>
+        </li>
         {% endif %}
 
         {% if project.github_frontend %}
-          <li>
-            <strong>GitHub:</strong>
-            <a href="{{ project.github_frontend }}">Frontend Repository</a>
-          </li>
+        <li>
+          <strong>GitHub:</strong>
+          <a href="{{ project.github_frontend }}">Frontend Repository</a>
+        </li>
         {% endif %}
 
         {% if project.github_backend %}
-          <li>
-            <strong>GitHub:</strong>
-            <a href="{{ project.github_backend }}">Backend Repository</a>
-          </li>
+        <li>
+          <strong>GitHub:</strong>
+          <a href="{{ project.github_backend }}">Backend Repository</a>
+        </li>
         {% endif %}
 
         {% if project.demo %}
-          <li>
-            <strong>Demo:</strong>
-            <a href="{{ project.demo }}">Open</a>
-          </li>
+        <li>
+          <strong>Demo:</strong>
+          <a href="{{ project.demo }}">Open</a>
+        </li>
         {% endif %}
 
         {% if project.paper %}
-          <li>
-            <strong>Paper:</strong>
-            <a href="{{ project.paper }}">View</a>
-          </li>
+        <li>
+          <strong>Paper:</strong>
+          <a href="{{ project.paper }}">View</a>
+        </li>
         {% endif %}
 
         {% if project.youtube %}
-          <li>
-            <strong>YouTube:</strong>
-            <a href="{{ project.youtube }}">Watch</a>
-          </li>
+        <li>
+          <strong>YouTube:</strong>
+          <a href="{{ project.youtube }}">Watch</a>
+        </li>
         {% endif %}
       </ul>
     </article>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
