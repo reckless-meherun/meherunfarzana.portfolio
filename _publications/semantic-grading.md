@@ -7,7 +7,7 @@ description: >
 image: /assets/img/publications/cognifyq_method_horizontal_2.png
 venue: <strong>ACL System Demonstration 2026</strong>
 authors: <strong>Meherun Farzana*</strong>, Aniket Joarder*, Mahmudul Hasan, Md. Mosaddek Khan
-paper_link: /assets/papers/cognifyq.pdf
+# paper_link: /assets/papers/cognifyq.pdf
 website_link: https://cognifyq.com/
 date: 2026-02-28
 ---

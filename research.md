@@ -1,6 +1,6 @@
 ---
 layout: research
-title: Research Projects
+title: Research Work
 description: >  
   A selection of my research work in my interested fields. Feel free to explore and reach me!
   (*indicates equal contributions)

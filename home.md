@@ -8,6 +8,7 @@ description: >
 hide_description: true
 redirect_from:
   - /download/
+cover: true
 ---
 
 <!--author-->
@@ -19,8 +20,8 @@ redirect_from:
 
 ## Experience
 
-- **Jan 2024 - Present**  
-  **Undergraduate Research Assistant**  
+- **Research Assistant**  
+  *2024 - Present*      
   Cognitive Agents and Interaction Lab (CAIL), *University of Dhaka*  
   Working under the supervision of [Dr. Md. Mosaddek Khan](https://scholar.google.com/citations?hl=en&user=IIb6f_4AAAAJ&view_op=list_works&sortby=pubdate)
 
@@ -29,6 +30,20 @@ redirect_from:
 - Developed [**CognifyQ**](https://cognifyq.com/), an AI-powered assessment platform for content ingestion, question generation, and semantic grading of typed and handwritten responses.
 
 - Working on research problems involving bilingual short-answer grading, RAG-based business intelligence, and long-context LLM efficiency.
+
+## Ongoing Research
+
+- **Text-to-SQL for Business Intelligence**  
+  *2026 - Present*  
+  Investigating Text-to-SQL methods for business intelligence applications, with a focus on improving LLM-based SQL generation over complex database schemas.
+
+- **Improving CognifyQ with Bloom’s Taxonomy and Scientific Figure Evaluation**  
+  *2025 - Present*  
+  Extending CognifyQ with Bloom’s Taxonomy-aware question generation and evaluation of handwritten scientific figures to support more structured educational assessment.
+
+- **Hybrid KV-Cache Compression for Long-Context LLM Inference**  
+  *2025 - Present*  
+  Exploring hybrid KV-cache compression strategies for long-context LLM inference to improve memory efficiency while preserving generation quality.
 
 <!-- ## Hydejack
 
