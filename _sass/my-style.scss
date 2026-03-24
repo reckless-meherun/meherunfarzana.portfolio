@@ -3,22 +3,26 @@
     @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
       text-underline-offset: .8rem;
     }
+
     @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
       padding-bottom: .45rem;
     }
   }
 
-  .btn, .gumroad-button  {
+  .btn,
+  .gumroad-button {
     margin: 1rem 0;
   }
 }
 
 .highlight-opportunity {
-  color: rgb(79,177,186);
+  color: rgb(79, 177, 186);
 }
+
 .highlight-opportunity a {
   color: rgb(0, 130, 142);
 }
+
 body.dark-mode .highlight-opportunity a {
   color: rgb(120, 220, 230);
 }
@@ -49,7 +53,7 @@ body.dark-mode .highlight-opportunity a {
 .content .avatar {
   width: 200px !important;
   height: auto !important;
-  border: 4px solid rgb(79,177,186);
+  border: 4px solid rgb(79, 177, 186);
   border-radius: 50%;
   padding: 4px;
   box-sizing: border-box;
