@@ -4,7 +4,7 @@ title: Semantic Grading of Written Answers in Low-Resource Language Bangla Using
 status: preprint
 description: >
   <ul>
-    <li>Fine-tuned a lightweight language model to grade responses (Bangla and English) from the question, reference answer, and student answer, returning a numeric score and concise context-grounded feedback.</li>
+    <li>Fine-tuned a lightweight language model to grade responses (Bangla and English) from the question, reference answer, and student answer, returning a numeric score and concise contexual feedback.</li>
     <li>Constructed a synthetic bilingual dataset for controlled training and evaluation, yielding stronger human-score agreement than several proprietary baselines.</li>
   </ul>
 image: /assets/img/publications/cognifyq_method_horizontal_2.png

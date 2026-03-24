@@ -25,7 +25,7 @@ cover: true
 Cognitive Agents and Interaction Lab (CAIL), *University of Dhaka*  
 Supervisor: [Dr. Md. Mosaddek Khan](https://scholar.google.com/citations?hl=en&user=IIb6f_4AAAAJ&view_op=list_works&sortby=pubdate)
 
-- Conducted research on bilingual (Bangla–English) semantic grading of written answers for low-resource educational settings, with emphasis on semantic correctness, concise feedback, and support for typed and handwritten responses. [**Preprint here**](/research/#semantic-grading).
+- Conducted research on bilingual (Bangla–English) semantic grading of written answers for low-resource educational settings, with emphasis on semantic correctness, contexual and concise feedback, and support for typed and handwritten responses. [**Preprint here**](/research/#semantic-grading).
 
 - Developed [**CognifyQ**](https://cognifyq.com/), a web-based assessment platform that ingests educational content from multiple sources, generates teacher-constrained questions, and provides automated evaluation and progress tracking.
 
