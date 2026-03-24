@@ -123,7 +123,6 @@ This portfolio includes:
 ├── CHANGELOG.md                        # Hydejack/theme changelog
 ├── LICENSE.md                          # Repository/theme license file
 └── NOTICE.md                           # Notices from the theme/package
-
-### Notes
-
+```
+### Note
 This website is customized from the Hydejack theme to better fit an academic and research-oriented portfolio.
