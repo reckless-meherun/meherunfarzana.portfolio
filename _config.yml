@@ -113,7 +113,7 @@ hydejack:
 
   dark_mode:
     always: false
-    dynamic: true
+    dynamic: false
     icon: true
 
   offline:

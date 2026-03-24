@@ -3,9 +3,9 @@ layout: publication
 title: Semantic Grading of Written Answers in Low-Resource Language Bangla Using a Fine-Tuned Lightweight Language Model
 status: preprint
 description: >
-  CognifyQ is an AI-powered assessment platform designed to support content ingestion, question generation, and semantic grading in educational settings.
+  
 image: /assets/img/publications/cognifyq_method_horizontal_2.png
-venue: <strong>ACL System Demonstration 2026</strong>
+venue: <strong>ACL System Demonstration 2026</strong> (under review)
 authors: <strong>Meherun Farzana*</strong>, Aniket Joarder*, Mahmudul Hasan, Md. Mosaddek Khan
 # paper_link: /assets/papers/cognifyq.pdf
 website_link: https://cognifyq.com/

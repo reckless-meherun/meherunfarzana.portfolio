@@ -23,17 +23,15 @@ cover: true
 - **Research Assistant**  
   *2024 - Present*      
   Cognitive Agents and Interaction Lab (CAIL), *University of Dhaka*  
-  Working under the supervision of [Dr. Md. Mosaddek Khan](https://scholar.google.com/citations?hl=en&user=IIb6f_4AAAAJ&view_op=list_works&sortby=pubdate)
+  Supervisor: [Dr. Md. Mosaddek Khan](https://scholar.google.com/citations?hl=en&user=IIb6f_4AAAAJ&view_op=list_works&sortby=pubdate)
 
-- Built AI systems and research prototypes in educational AI and semantic grading.
+- Conducted research on bilingual (Bangla–English) semantic grading of written answers for low-resource educational settings, with emphasis on semantic correctness, concise feedback, and support for typed and handwritten responses.
 
-- Developed [**CognifyQ**](https://cognifyq.com/), an AI-powered assessment platform for content ingestion, question generation, and semantic grading of typed and handwritten responses.
-
-- Working on research problems involving bilingual short-answer grading, RAG-based business intelligence, and long-context LLM efficiency.
+- Developed [**CognifyQ**](https://cognifyq.com/), a web-based assessment platform that ingests educational content from multiple sources, generates teacher-constrained questions, and provides automated evaluation and progress tracking.
 
 ## Ongoing Research
 
-- **Text-to-SQL for Business Intelligence**  
+- **Efficient Text-to-SQL for Business Intelligence**  
   *2026 - Present*  
   Investigating Text-to-SQL methods for business intelligence applications, with a focus on improving LLM-based SQL generation over complex database schemas.
 

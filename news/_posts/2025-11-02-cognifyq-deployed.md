@@ -17,13 +17,13 @@ sitemap: false
 I am excited to share that **CognifyQ** is now deployed online.
 {:.lead}
 
-CognifyQ is an **LLM-based educational assessment platform** developed as part of my **undergraduate thesis** in the Department of Computer Science and Engineering at the **University of Dhaka**. The project focuses on going beyond surface-level text matching to evaluate the **semantic depth** of student responses in a more meaningful and human-aligned way.
+CognifyQ is an **LLM-based educational assessment platform** developed as part of my **undergraduate thesis** in Department of Computer Science and Engineering at **University of Dhaka**. The project focuses on going beyond surface-level text matching to evaluate the **semantic depth** of student responses in a more meaningful and human-aligned way.
 
 <!--more-->
 
 The platform was designed to support more practical and scalable assessment workflows, especially in educational settings where manual evaluation creates heavy workloads for teachers. It supports **Bangla and English**, handles multiple input formats, and is built to make automated assessment more accessible, consistent, and useful for both teachers and students.
 
-As part of this work, I developed and deployed a full web-based system that brings together the research and engineering sides of the project. This included building the assessment workflow, integrating the language model pipeline, and making the platform available through a live public deployment.
+As part of this work, we developed and deployed a full web-based system that brings together the research and engineering sides of the project. This included building the assessment workflow, integrating the language model pipeline, and making the platform available through a live public deployment.
 
 ### Live Website
 
@@ -42,5 +42,3 @@ A short demonstration of the system is available here:
 CognifyQ was developed as part of my undergraduate thesis, titled **“Beyond Surface Metrics: Leveraging LLMs to Assess Semantic Depth of Human Responses.”** The project reflects my broader interest in **AI, natural language processing, educational technology, and human-aligned evaluation systems**.
 
 Deploying the platform online was an important milestone for me, because it turned the thesis from a research idea into a usable system that people can actually interact with. Research is nice, but seeing it survive contact with the real world is nicer.
-
-I am grateful to everyone who supported me throughout this journey, especially my supervisor, collaborators, and teachers. This deployment marks an important step in my undergraduate research journey, and I hope to continue improving the system in the future.

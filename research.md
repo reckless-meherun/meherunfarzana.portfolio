@@ -2,7 +2,7 @@
 layout: research
 title: Research Work
 description: >  
-  A selection of my research work in my interested fields. Feel free to explore and reach me!
+  A selection of my research work is listed here. Feel free to explore and reach me!
   (*indicates equal contributions)
 permalink: /research/
 slug: research

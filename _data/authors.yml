@@ -8,8 +8,11 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Hi! I am Meherun Farzana, a Computer Science and Engineering student at University of Dhaka. My work focuses on AI, natural language processing and educational technology. My recent interests include large language models, vision-language models, multimodal learning, and human-aligned evaluation systems for student responses. I am particularly interested in building practical AI systems that are both technically strong and useful in real educational settings. Currently, I am working on projects related to short-answer grading, and context-aware language and vision systems.
-    > **I expect to graduate by May 2026 and am currently seeking research, internship, collaboration and entry-level opportunities in AI/ML/NLP. I would greatly appreciate it if you could reach out by email regarding any suitable opportunities at [meherun2001@gmail.com](mailto:meherun2001@gmail.com)!**
+    Hi! I am Meherun Farzana, a senior undergraduate student in **Computer Science and Engineering** at [**University of Dhaka**](https://www.du.ac.bd/body/CSE). My work focuses on **natural language processing** and **AI in education**. Automatically evaluating the semantic and contextual depth of complex handwritten figures is what recently fascinates me the most. Currently, I work as a **Research Assistant** at **Cognitive Agents and Interaction Lab** [**(CAIL)**](https://cognistorm.ai/) under the supervision of [**Dr. Md. Mosaddek Khan**](https://scholar.google.com/citations?user=IIb6f_4AAAAJ&hl=en). My recent interests include:
+    - **Large Language Models**
+    - **Computer Vision**
+    - **Multimodal Reasoning**
+    > <span class="highlight-opportunity">**I am expected to graduate by May 2026 and currently seeking research collaborations, internship and entry-level opportunities worldwide. I would highly appreciate it if you would reach me out regarding any suitable opportunities at [meherun2001@gmail.com](mailto:meherun2001@gmail.com)!**</span>
 # Open `_data/authors.yml` to edit this text.
 
   # This photo will be used in the about section

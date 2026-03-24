@@ -13,6 +13,16 @@
   }
 }
 
+.highlight-opportunity {
+  color: rgb(79,177,186);
+}
+.highlight-opportunity a {
+  color: rgb(0, 130, 142);
+}
+body.dark-mode .highlight-opportunity a {
+  color: rgb(120, 220, 230);
+}
+
 .sidebar .sidebar-sticky .avatar {
   width: 180px;
   height: 180px;
@@ -61,4 +71,18 @@
 .sidebar-nav-item.active::after {
   opacity: 1 !important;
   transform: scaleX(1) !important;
+}
+
+a.external::after,
+a[href^="http"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+hr.dingbat {
+  display: none !important;
+}
+
+footer hr.dingbat {
+  display: block !important;
 }
